@@ -1,0 +1,245 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #f6f7fc;
+  color: #282943;
+}
+
+button, input {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+.app {
+  min-height: 100vh;
+}
+
+.sidebar {
+  width: 240px;
+  position: fixed;
+  inset: 0 auto 0 0;
+  background: white;
+  border-right: 1px solid #e9e9f2;
+  padding: 30px 20px;
+}
+
+.logo {
+  font-size: 27px;
+  margin: 0 0 45px;
+  letter-spacing: -1px;
+}
+
+.logo span {
+  color: #7965df;
+}
+
+.label {
+  color: #9998ac;
+  font-size: 11px;
+  letter-spacing: 1px;
+  font-weight: 700;
+}
+
+.menu {
+  padding: 14px;
+  margin: 8px 0;
+  border-radius: 10px;
+  color: #77778d;
+  font-size: 14px;
+}
+
+.menu.active {
+  background: #efecff;
+  color: #705bd4;
+  font-weight: 600;
+}
+
+.profile {
+  position: absolute;
+  bottom: 30px;
+  left: 22px;
+  font-size: 13px;
+}
+
+.main {
+  margin-left: 240px;
+  padding: 0 40px;
+}
+
+.topbar {
+  padding: 28px 0;
+  border-bottom: 1px solid #e9e9f2;
+  color: #89899e;
+  font-size: 13px;
+}
+
+.welcome {
+  padding: 40px 0 25px;
+}
+
+.welcome h1 {
+  font-size: 40px;
+  letter-spacing: -1px;
+  margin: 12px 0;
+}
+
+.welcome > p:last-child {
+  color: #8c8ca1;
+  font-size: 14px;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.card, .task-panel {
+  background: white;
+  border: 1px solid #eaeaf2;
+  border-radius: 15px;
+  padding: 22px;
+}
+
+.card p {
+  color: #85859b;
+  font-size: 13px;
+}
+
+.card h2 {
+  font-size: 30px;
+  margin: 10px 0 0;
+}
+
+.task-panel {
+  margin-top: 25px;
+}
+
+.task-panel > p {
+  color: #8b8ba0;
+  font-size: 13px;
+}
+
+.task-form {
+  display: flex;
+  gap: 12px;
+  margin: 25px 0 15px;
+}
+
+.task-form input {
+  flex: 1;
+  min-width: 0;
+  padding: 14px;
+  border: 1px solid #e3e3ee;
+  border-radius: 9px;
+  outline-color: #7965df;
+}
+
+.task-form button {
+  border: none;
+  border-radius: 9px;
+  background: #7965df;
+  color: white;
+  padding: 12px 18px;
+}
+
+.task-form button:hover {
+  background: #6652cb;
+}
+
+.empty {
+  text-align: center;
+  padding: 30px 10px;
+  color: #7965df;
+}
+
+.empty h3 {
+  color: #35354b;
+  font-size: 16px;
+}
+
+.empty p {
+  color: #9292a6;
+  font-size: 13px;
+}
+
+.task {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  padding: 15px 0;
+  border-bottom: 1px solid #eeeef5;
+  font-size: 14px;
+}
+
+.task input {
+  accent-color: #7965df;
+  width: 17px;
+  height: 17px;
+}
+
+.done {
+  text-decoration: line-through;
+  color: #9999aa;
+}
+
+footer {
+  text-align: center;
+  padding: 30px 0;
+  color: #a0a0b0;
+  font-size: 12px;
+}
+
+@media (max-width: 750px) {
+  .sidebar {
+    width: 65px;
+    padding: 20px 5px;
+  }
+
+  .logo {
+    font-size: 15px;
+  }
+
+  .logo span, .label, .profile {
+    display: none;
+  }
+
+  .menu {
+    font-size: 11px;
+    padding: 12px 5px;
+    text-align: center;
+  }
+
+  .main {
+    margin-left: 65px;
+    padding: 0 15px;
+  }
+
+  .welcome h1 {
+    font-size: 29px;
+  }
+
+  .stats {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .card {
+    padding: 15px;
+  }
+
+  .task-panel {
+    padding: 15px;
+  }
+
+  .task-form {
+    flex-direction: column;
+  }
+}
